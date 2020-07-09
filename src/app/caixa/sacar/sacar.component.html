@@ -1,0 +1,17 @@
+<div class="example-container">
+	<mat-form-field appearance="fill">
+		<mat-label>Quantidade</mat-label>
+		<input matInput type="number" class="example-right-align" [(ngModel)]="notas">
+		<span matPrefix>$&nbsp;</span>
+	</mat-form-field>
+</div>
+<button (click)="sacar()">SACAR</button>
+<div class="one" [innerHtml]="htmlToAdd"></div>
+<button (click)="nao()" [innerHtml]="sem"></button>
+<button (click)="opcao('dois')" [innerHtml]="botaoDois"></button>
+<button (click)="opcao('cinco')" [innerHtml]="botaoCinco"></button>
+<button (click)="opcao('dez')" [innerHtml]="botaoDez"></button>
+<button (click)="opcao('vinte')" [innerHtml]="botaoVinte"></button>
+<button (click)="opcao('cinquenta')" [innerHtml]="botaoCinquenta"></button>
+<button (click)="opcao('cem')" [innerHtml]="botaoCem"></button>
+<div class="one" [innerHtml]="resultado"></div>

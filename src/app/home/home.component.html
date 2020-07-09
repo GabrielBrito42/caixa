@@ -1,0 +1,68 @@
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form>
+			<div class="example-container">
+			  <mat-form-field appearance="fill">
+			    <mat-label>Entre com seu email</mat-label>
+			    <input matInput placeholder="pat@example.com" [formControl]="email" required [(ngModel)]="conta.email" name="email">
+			    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+			  </mat-form-field>
+			</div>
+			<div class="example-container">
+			  <mat-form-field appearance="fill">
+			    <mat-label>Entre com seu nome</mat-label>
+			    <input matInput placeholder="entre com seu nome:" [formControl]="nome" required [(ngModel)]="conta.nome" name="nome">
+			    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+			  </mat-form-field>
+			</div>
+			<div class="example-container">
+				<mat-form-field appearance="fill">
+			    <mat-label>Entre com sua senha</mat-label>
+			    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="senha" [(ngModel)]="conta.senha" name="senha">
+			    <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+			    	<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+			    
+		    	</button>
+	  		</mat-form-field>
+			</div>
+			<button class="padrao" (click)="Cadastrar()">Cadastrar</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Login</h1>
+			<div class="example-container">
+			  <mat-form-field appearance="fill">
+			    <mat-label>Entre com seu email</mat-label>
+			    <input matInput placeholder="pat@example.com" [formControl]="email" required [(ngModel)]="conta.email" name="email">
+			    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+			  </mat-form-field>
+			</div>
+			<div class="example-container">
+				<mat-form-field appearance="fill">
+			    <mat-label>Entre com sua senha</mat-label>
+			    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="senha" [(ngModel)]="conta.senha" name="senha">
+			    <button  mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+			    	<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+			    
+		    	</button>
+	  		</mat-form-field>
+			</div>
+			<button  class="padrao" (click)="FazerLogin()">Logar</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<button class="padrao" class="ghost" id="signIn" (click)="TrocarTelaInversa()">Logar</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Ainda não possui uma conta? Cadastre-se</h1>
+				<button class="ghost" id="signUp" (click)="TrocarTela()">Cadastrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+</footer>

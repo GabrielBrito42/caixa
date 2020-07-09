@@ -1,0 +1,12 @@
+<div class="example-container">
+	<mat-form-field appearance="fill">
+		<mat-label>Quantidade</mat-label>
+		<input matInput type="number" class="example-right-align" [(ngModel)]="notas">
+		<span matPrefix>$&nbsp;</span>
+		<span matSuffix>.00</span>
+	</mat-form-field>
+</div>
+
+<div class="one" [innerHtml]="htmlToAdd"></div>
+<button (click)="depositar()">Depositar</button>
+<button (click)="extrato()">Extrato</button>
